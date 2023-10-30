@@ -1,0 +1,11 @@
+[Unit]
+Description=Car service
+After=bluetooth.target
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python3 -u /home/pi/car/car.py
+
+[Install]
+WantedBy=multi-user.target
