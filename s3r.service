@@ -1,0 +1,11 @@
+[Unit]
+Description=s3r service
+After=bluetooth.target
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python3 -u /usr/local/bin/s3r
+
+[Install]
+WantedBy=multi-user.target
